@@ -1,7 +1,14 @@
-<form>
-  <mat-form-field>
-    <input type="text">
-  </mat-form-field>
-
-  <input type="text">
+<form class="frmregister">
+  <mat-card>
+    <mat-card-title>Register User</mat-card-title>
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput [(ngModel)]="registerData.email" name="email" type="email" placeholder="Enter email">
+      </mat-form-field><br/>
+      <mat-form-field>
+        <input matInput [(ngModel)]="registerData.pwd" name="pwd" type="password" placeholder="Enter password">
+      </mat-form-field><br/>
+      <button mat-raised-button (click)="registered()">Register</button>
+    </mat-card-content>
+  </mat-card>
 </form>
