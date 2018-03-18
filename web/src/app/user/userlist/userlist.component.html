@@ -1,0 +1,18 @@
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users | async">
+      <td>{{ user.email }}</td>
+    </tr>
+  </tbody>
+</table> -->
+
+<mat-nav-list>
+  <a mat-list-item *ngFor="let usr of users | async" [routerLink]="['/userprofile',usr._id]" >
+    {{ usr. email }}
+  </a>
+</mat-nav-list>

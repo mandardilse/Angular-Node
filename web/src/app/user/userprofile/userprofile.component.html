@@ -1,0 +1,7 @@
+<p><a [routerLink]="['/users']">back</a></p>
+<div class="card" *ngIf="user$|async as user">
+  <div class="card-body">
+	<label for="">Id:</label> {{user._id}}<br/>
+	<label for="">Email:</label> {{user.email}}
+  </div>
+</div>

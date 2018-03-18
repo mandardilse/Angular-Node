@@ -1,8 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <mat-toolbar>
   Contact Management
+  <a mat-button routerLink="/users">Users</a>
+  <a mat-button routerLink="/posts">Posts</a>
   <span style="flex: 1 1 auto"></span>
   <a mat-button routerLink="/register">Register</a>
+  <a mat-button routerLink="/login">Login</a>
 </mat-toolbar>
-<router-outlet></router-outlet>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
 

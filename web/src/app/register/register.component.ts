@@ -14,8 +14,7 @@ export class RegisterComponent implements OnInit {
   }
 
   registered(){
-    this.registerService.postUserRegistration(this.registerData);
-    console.log(this.registerData);
+    this.registerService.postUserRegistration(this.registerData)
   }
 
 }

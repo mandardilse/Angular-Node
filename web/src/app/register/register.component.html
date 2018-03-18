@@ -4,10 +4,20 @@
     <mat-card-content>
       <mat-form-field>
         <input matInput [(ngModel)]="registerData.email" name="email" type="email" placeholder="Enter email">
-      </mat-form-field><br/>
+      </mat-form-field>
+      <br/>
       <mat-form-field>
         <input matInput [(ngModel)]="registerData.pwd" name="pwd" type="password" placeholder="Enter password">
-      </mat-form-field><br/>
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <input matInput [(ngModel)]="registerData.name" name="name" placeholder="Enter name">
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <textarea matInput [(ngModel)]="registerData.description" name="description" type="password" placeholder="Enter description"></textarea>
+      </mat-form-field>
+      <br/>
       <button mat-raised-button (click)="registered()">Register</button>
     </mat-card-content>
   </mat-card>

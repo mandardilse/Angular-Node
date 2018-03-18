@@ -1,16 +1,26 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+import { Constant } from '../shared/constant';
+
+
 
 @Injectable()
 export class UserService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, @Inject(Constant) private constant) { }
   postUserRegistration(registerData){
-    this.http.post('http://localhost:3000/register',registerData)
-      .subscribe(res=> res)
+    this.http.post(this.constant.Register_Url,registerData).subscribe(s => {})
   }
 
   makeLogin(loginDetails){
-    this.http.post('http://localhost:3000/login', loginDetails)
-      .subscribe(res=>res)
+    return this.http.post(this.constant.Login_Url,loginDetails)
+  }
+
+  getAllUsers(){
+    return this.http.get(this.constant.Users_Url)
+  }
+
+  getUser(id:any){
+    return this.http.get(this.constant.Users_Profile+id)
   }
 }
