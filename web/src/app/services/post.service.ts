@@ -16,7 +16,7 @@ export class PostService {
   }
 
   createPost(PostData:any){
-    return this.http.post(this.constant.Posts_Url,PostData)
+    return this.http.post(this.constant.Posts_Url,PostData).subscribe(p=> p);
   }
 
   updatePost(PostData:any){

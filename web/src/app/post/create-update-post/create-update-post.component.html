@@ -3,9 +3,9 @@
   <div class="card-body">
     <form>
       <div class="form-group">
-        <textarea></textarea>
+        <textarea [(ngModel)]="postDetails.msg" name="msg"></textarea>
       </div>
-      <button type="button" class="btn btn-primary|secondary|success|danger|warning|info|light|dark|link">Create</button>
+      <button type="button" (click)="onSave()" class="btn btn-primary|secondary|success|danger|warning|info|light|dark|link">Create</button>
     </form>
   </div>
 </div>

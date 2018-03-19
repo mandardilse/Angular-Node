@@ -16,11 +16,11 @@ app.use('/users', users)
 
 app.use('/posts',posts)
 
-mongoose.connect("mongodb://Test:Test@ds039427.mlab.com:39427/empdb", (err)=>{
+mongoose.connect("mongodb://localhost:27017/test_db", (err)=>{
 	if(!err)
 		console.log("Connected!....")
 	else
 		console.log(err)
 })
 
-app.listen(3000)
+app.listen(3200)

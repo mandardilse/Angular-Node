@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 
 @Injectable()
 export class Constant {
-	private backEnd_BaseUrl = 'http://localhost:3000'
+	private backEnd_BaseUrl = 'http://localhost:3200'
 	private auth_BaseUrl = '/auth'
 	private user_BaseUrl = '/users'
 	private post_BaseUrl = '/posts'

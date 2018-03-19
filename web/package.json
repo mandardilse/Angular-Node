@@ -23,6 +23,8 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "@ngrx/core": "^1.2.0",
+    "@ngrx/store": "^5.2.0",
     "boostrap": "^2.0.0",
     "bootstrap": "^4.0.0",
     "classlist.js": "^1.1.20150312",

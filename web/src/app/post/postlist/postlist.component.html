@@ -1,1 +1,7 @@
 <app-create-update-post></app-create-update-post>
+<br/>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let post of $postList | async">        
+        {{post.msg}}
+    </li>    
+</ul>

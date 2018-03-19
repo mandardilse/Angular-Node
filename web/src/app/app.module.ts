@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers  } from './store/reducer/reducer';
 
 import { Constant } from '../app/shared/constant';
 
@@ -26,6 +28,7 @@ import { UserprofileComponent } from './user/userprofile/userprofile.component';
 import { PostlistComponent } from './post/postlist/postlist.component';
 import { SinglePostComponent } from './post/single-post/single-post.component';
 import { CreateUpdatePostComponent } from './post/create-update-post/create-update-post.component';
+import { PostService } from './services/post.service';
 
 const route: Routes = [
   { path: 'register', component: RegisterComponent},
@@ -58,9 +61,10 @@ const route: Routes = [
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatListModule
+    MatListModule,
+    StoreModule.forRoot(reducers, {metaReducers})
   ],
-  providers: [ UserService, Constant],
+  providers: [ UserService, Constant, PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
